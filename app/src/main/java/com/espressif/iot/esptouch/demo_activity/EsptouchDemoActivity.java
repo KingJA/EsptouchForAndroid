@@ -19,6 +19,7 @@ import com.espressif.iot.esptouch.IEsptouchListener;
 import com.espressif.iot.esptouch.IEsptouchResult;
 import com.espressif.iot.esptouch.IEsptouchTask;
 import com.espressif.iot.esptouch.dialog.LoadDialog;
+import com.espressif.iot.esptouch.kingja.SoundPlayer;
 import com.espressif.iot.esptouch.kingja.XSTetView;
 import com.espressif.iot.esptouch.task.__IEsptouchTask;
 import com.espressif.iot_esptouch_demo.R;
@@ -87,10 +88,12 @@ public class EsptouchDemoActivity extends Activity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_add_count:
+                SoundPlayer.getInstance().playVoice(R.raw.power_up);
                 currentCount = Integer.valueOf(tv_currentCount.getText().toString().trim());
                 tv_currentCount.setText(String.valueOf(++currentCount));
                 break;
             case R.id.tv_reduce_count:
+                SoundPlayer.getInstance().playVoice(R.raw.power_up);
                 currentCount = Integer.valueOf(tv_currentCount.getText().toString().trim());
                 if (currentCount > 1) {
                     tv_currentCount.setText(String.valueOf(--currentCount));
@@ -298,4 +301,5 @@ public class EsptouchDemoActivity extends Activity implements OnClickListener {
             }
         }
     }
+
 }

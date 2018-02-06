@@ -23,30 +23,30 @@
             />
 
         <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_send_password"
             style="@style/green_font_20sp_selector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:onClick="openSendPassword"
             android:padding="24dp"
             android:text="[Send Password]"/>
 
         <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_tag_datas"
             style="@style/green_font_20sp_selector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:onClick="openTagDataActivity"
             android:padding="24dp"
             android:text="[Tag datas]"/>
 
         <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_tags"
             style="@style/green_font_20sp_selector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:onClick="openTagActivity"
             android:padding="24dp"
             android:text="[Tags]"/>
 

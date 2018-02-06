@@ -20,6 +20,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         context=getApplicationContext();
+        SoundPlayer.getInstance().init(context);
         LoadSir.beginBuilder()
                 .addCallback(new ErrorCallback())
                 .addCallback(new EmptyCallback())
