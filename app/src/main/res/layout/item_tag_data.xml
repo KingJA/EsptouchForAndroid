@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/c_bg"
+              android:orientation="vertical"
+              android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:layout_marginRight="4dp"
+                style="@style/gray_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[tag id]"/>
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:id="@+id/tv_tagId"
+                style="@style/green_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:text="452155"/>
+
+        </LinearLayout>
+
+
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_date"
+            style="@style/gray_font_12sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2018-01-01 18:25:25"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:layout_marginRight="4dp"
+                style="@style/gray_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[base station]"/>
+
+
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:id="@+id/tv_tagStation"
+                style="@style/green_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="452155"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:layout_marginRight="4dp"
+                style="@style/gray_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[tag content]"/>
+
+
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                android:id="@+id/tv_tagContent"
+                style="@style/green_font_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEFGEF"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

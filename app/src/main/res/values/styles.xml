@@ -1,0 +1,94 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/apha_open</item>
+        <item name="android:activityCloseEnterAnimation">@anim/apha_close</item>
+        <item name="android:activityOpenExitAnimation">@anim/apha_open</item>
+        <item name="android:activityCloseExitAnimation">@anim/apha_close</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!--divides-->
+    <style name="divide_hor">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/c_title_divide</item>
+    </style>
+
+
+
+    <!--fonts-->
+    <style name="green_font_20sp">
+        <item name="android:textColor">@color/c_green</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="green_font_20sp_selector">
+        <item name="android:textColor">@drawable/click_selector</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="green_light_font_20sp">
+        <item name="android:textColor">@color/c_green_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="green_font_12sp">
+        <item name="android:textColor">@color/c_green</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="green_light_font_12sp">
+        <item name="android:textColor">@color/c_green_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="green_light_font_15sp">
+        <item name="android:textColor">@color/c_green_light</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="green_font_15sp">
+        <item name="android:textColor">@color/c_green</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="gray_font_12sp">
+        <item name="android:textColor">@color/c_font</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="gray_font_12sp_tran">
+        <item name="android:textColor">@color/c_tran_font</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="gray_font_15sp">
+        <item name="android:textColor">@color/c_font</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--对话框样式-->
+    <style name="CustomAlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/wrap_dialog</item>
+    </style>
+
+    <style name="InputDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/wrap_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+</resources>

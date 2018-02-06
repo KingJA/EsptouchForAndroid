@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="c_font">#99e6e6e6</color>
+    <color name="c_tran_font">#33e6e6e6</color>
+    <color name="c_bg">#000000</color>
+    <color name="c_green">#008000</color>
+    <color name="c_green_light">#00FF00</color>
+    <color name="c_title_divide">#99ffffff</color>
+    <color name="c_divide">#66ffffff</color>
+    <color name="c_black">#000000</color>
+    <color name="c_edit">#33008000</color>
+    <color name="c_warn">#a91d1f</color>
+</resources>

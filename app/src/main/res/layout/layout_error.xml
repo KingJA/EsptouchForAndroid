@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_error"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_black"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/green_font_15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="error"/>
+
+    <TextView
+        style="@style/green_light_font_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ retry ]"/>
+</LinearLayout>

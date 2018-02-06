@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingTop="16dp"
+              android:paddingBottom="16dp"
+              android:paddingLeft="30dp"
+              android:paddingRight="30dp">
+
+    <com.espressif.iot.esptouch.kingja.XSTetView
+        style="@style/green_font_20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete this tag ?"/>
+
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_cancel"
+            android:padding="6dp"
+            style="@style/gray_font_15sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[Cancel]"/>
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            android:id="@+id/tv_delete"
+            android:padding="6dp"
+            style="@style/green_light_font_15sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[Delete]"/>
+    </LinearLayout>
+
+</LinearLayout>

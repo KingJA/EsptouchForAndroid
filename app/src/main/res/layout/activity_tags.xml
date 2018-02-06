@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/c_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            android:padding="6dp"
+            android:id="@+id/tv_exit"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            style="@style/green_font_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="[Exit]"/>
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            style="@style/green_font_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tags"/>
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            android:padding="6dp"
+            android:id="@+id/tv_add"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            style="@style/green_font_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="[Add]"/>
+
+    </RelativeLayout>
+    <View style="@style/divide_hor"/>
+
+    <ListView
+        android:id="@+id/lv_tags"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/c_divide"
+        android:dividerHeight="1px"
+        tools:listitem="@layout/item_tag_data"/>
+
+</LinearLayout>
