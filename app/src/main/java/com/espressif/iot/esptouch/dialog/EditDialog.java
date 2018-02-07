@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.espressif.iot.esptouch.entiy.Tag;
+import com.espressif.iot.esptouch.kingja.SoundPlayer;
 import com.espressif.iot_esptouch_demo.R;
 
 /**
@@ -75,9 +76,11 @@ public class EditDialog extends BaseDialog {
     public void childClick(View v) {
         switch (v.getId()) {
             case R.id.tv_cancel:
+                SoundPlayer.getInstance().playVoice(R.raw.power_down);
                 onEditTagStatusListener.onEditTagStatus(tag.getTagId(),DISABLE,position);
                 break;
             case R.id.tv_delete:
+                SoundPlayer.getInstance().playVoice(R.raw.power_up);
                 onEditTagStatusListener.onEditTagStatus(tag.getTagId(),ABLE,position);
                 break;
             default:

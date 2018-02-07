@@ -4,12 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/c_black">
+    android:background="@color/c_black"
+   >
 
     <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
 
         <com.airbnb.lottie.LottieAnimationView
@@ -19,46 +21,77 @@
             android:layout_marginTop="24dp"
             app:lottie_autoPlay="true"
             app:lottie_fileName="animation.json"
-            app:lottie_loop="true"
-            />
+            app:lottie_loop="true"/>
 
         <com.espressif.iot.esptouch.kingja.XSTetView
             android:id="@+id/tv_send_password"
             style="@style/green_font_20sp_selector"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:padding="24dp"
+            android:padding="18dp"
             android:text="[Send Password]"/>
 
         <com.espressif.iot.esptouch.kingja.XSTetView
             android:id="@+id/tv_tag_datas"
             style="@style/green_font_20sp_selector"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="24dp"
+            android:padding="18dp"
             android:text="[Tag datas]"/>
 
         <com.espressif.iot.esptouch.kingja.XSTetView
             android:id="@+id/tv_tags"
             style="@style/green_font_20sp_selector"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="24dp"
+            android:padding="18dp"
             android:text="[Tags]"/>
 
     </LinearLayout>
 
-    <com.espressif.iot.esptouch.kingja.XSTetView
-        style="@style/gray_font_12sp_tran"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="18dp"
         android:gravity="center"
-        android:text="© 2018 Tdr ST Co.,Ltd | V 0.3.4.6"/>
+        android:orientation="vertical">
+
+
+        <com.espressif.iot.esptouch.kingja.XSTetView
+            style="@style/gray_font_12sp_tran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="© 2018 Tdr ST Co.,Ltd | V 0.3.4.6"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.espressif.iot.esptouch.kingja.XSTetView
+                style="@style/gray_font_12sp_tran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:gravity="center"
+                android:text="Power by"/>
+
+            <com.espressif.iot.esptouch.kingja.BottomLineTetView
+                android:onClick="seeKingJA"
+                style="@style/gray_font_12sp_tran_highlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="KingJA"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
 </RelativeLayout>
 

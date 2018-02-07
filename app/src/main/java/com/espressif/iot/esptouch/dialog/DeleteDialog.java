@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import com.espressif.iot.esptouch.kingja.SoundPlayer;
 import com.espressif.iot_esptouch_demo.R;
 
 /**
@@ -55,6 +56,7 @@ public class DeleteDialog extends BaseDialog {
                 break;
             case R.id.tv_delete:
                 if (onTagDeleteListener != null) {
+                    SoundPlayer.getInstance().playVoice(R.raw.close);
                     onTagDeleteListener.onTagDelete(tagId,position);
                 }
                 break;

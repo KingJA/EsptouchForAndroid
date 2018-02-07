@@ -52,7 +52,10 @@
         <item name="android:textColor">@color/c_green</item>
         <item name="android:textSize">12sp</item>
     </style>
-
+    <style name="green_font_12sp_selector">
+        <item name="android:textColor">@drawable/click_selector</item>
+        <item name="android:textSize">12sp</item>
+    </style>
     <style name="green_light_font_12sp">
         <item name="android:textColor">@color/c_green_light</item>
         <item name="android:textSize">12sp</item>
@@ -67,13 +70,20 @@
         <item name="android:textColor">@color/c_green</item>
         <item name="android:textSize">15sp</item>
     </style>
-
+    <style name="error_font_15sp">
+        <item name="android:textColor">@color/c_warn</item>
+        <item name="android:textSize">15sp</item>
+    </style>
     <style name="gray_font_12sp">
         <item name="android:textColor">@color/c_font</item>
         <item name="android:textSize">12sp</item>
     </style>
     <style name="gray_font_12sp_tran">
-        <item name="android:textColor">@color/c_tran_font</item>
+    <item name="android:textColor">@color/c_tran_font</item>
+    <item name="android:textSize">12sp</item>
+</style>
+    <style name="gray_font_12sp_tran_highlight">
+        <item name="android:textColor">@color/c_tran_highlight_font</item>
         <item name="android:textSize">12sp</item>
     </style>
     <style name="gray_font_15sp">

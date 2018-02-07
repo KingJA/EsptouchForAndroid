@@ -80,6 +80,7 @@ public class TagDataListActivity extends Activity implements Callback.OnReloadLi
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         loadService.showCallback(ErrorCallback.class);
+                        SoundPlayer.getInstance().playVoice(R.raw.error01);
                     }
                 })
                 .setUrl(Constants.TAG_DATAS)

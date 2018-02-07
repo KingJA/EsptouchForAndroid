@@ -17,6 +17,8 @@ public class SoundPlayer {
     private volatile static SoundPlayer mSoundPlayer;
     private static SoundPool soundPool;
     private Context context;
+    private int currentSoundId;
+    private int currentPlay;
 
     private SoundPlayer() {
     }
@@ -37,7 +39,7 @@ public class SoundPlayer {
      * 可以同时播放多种音频
      * 消耗资源较小
      */
-    public  void init(Context context) {
+    public void init(Context context) {
         this.context = context;
         if (Build.VERSION.SDK_INT >= 21) {
             SoundPool.Builder builder = new SoundPool.Builder();
@@ -56,14 +58,17 @@ public class SoundPlayer {
     }
 
     public void playVoice(int rawId) {
+        playVoice(rawId, false);
+    }
+
+    public void playVoice(int rawId, boolean loop) {
 //        soundPool.release();
         //第一个参数Context,第二个参数资源Id，第三个参数优先级
-        final int voiceId = soundPool.load(context, rawId, 1);
-        Log.e("playVoice", "voiceId: "+voiceId );
+        currentSoundId = soundPool.load(context, rawId, 1);
         soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
             @Override
             public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
-                soundPool.play(voiceId, 1, 1, 0, 0, 1);
+                currentPlay = soundPool.play(currentSoundId, 1, 1, 0, loop ? -1 : 0, 1);
             }
         });
         //第一个参数id，即传入池中的顺序，第二个和第三个参数为左右声道，第四个参数为优先级，第五个是否循环播放，0不循环，-1循环
@@ -72,9 +77,10 @@ public class SoundPlayer {
         //回收Pool中的资源
 //        soundPool.release();
     }
-    public void release() {
+
+    public void stop() {
         if (soundPool != null) {
-            soundPool.release();
+            soundPool.stop(currentPlay);
         }
     }
 }

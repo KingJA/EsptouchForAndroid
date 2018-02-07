@@ -79,6 +79,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                                 loadService.showSuccess();
                             } else {
                                 loadService.showCallback(EmptyCallback.class);
+                                SoundPlayer.getInstance().playVoice(R.raw.error01);
                             }
 
                         }
@@ -87,6 +88,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                 .setErrorListener(new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        SoundPlayer.getInstance().playVoice(R.raw.error01);
                         loadService.showCallback(ErrorCallback.class);
                     }
                 })
@@ -159,7 +161,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                         if (response.getStatus() == 0) {
                             tagsAdapter.setStatus(position, status);
                             loadDialog.showTip("Success");
-                        }else{
+                        } else {
                             loadDialog.showTip(response.getMessage());
                         }
                     }
@@ -189,9 +191,10 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                     @Override
                     public void onResponse(NoResult response) {
                         if (response.getStatus() == 0) {
+                            SoundPlayer.getInstance().playVoice(R.raw.success);
                             tagsAdapter.addTag(Integer.valueOf(tagId));
                             loadDialog.showTip("Success");
-                        }else{
+                        } else {
                             loadDialog.showTip(response.getMessage());
                         }
                     }
@@ -224,7 +227,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                         if (response.getStatus() == 0) {
                             tagsAdapter.removeItem(position);
                             loadDialog.showTip("Success");
-                        }else{
+                        } else {
                             loadDialog.showTip(response.getMessage());
                         }
                     }
@@ -233,7 +236,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         loadDialog.dismiss();
-                        ToastUtil.showText(error.getMessage());
+                        SoundPlayer.getInstance().playVoice(R.raw.error01);
                     }
                 })
                 .setUrl(Constants.DELETE_TAG)

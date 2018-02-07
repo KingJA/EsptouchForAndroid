@@ -3,9 +3,11 @@ package com.espressif.iot.esptouch.dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.espressif.iot.esptouch.kingja.SoundPlayer;
 import com.espressif.iot_esptouch_demo.R;
 
 /**
@@ -71,6 +73,7 @@ public class LoadDialog extends BaseDialog implements DialogInterface.OnDismissL
     @Override
     public void onDismiss(DialogInterface dialogInterface) {
         loadHandler.removeCallbacks(loadRunnable);
+        SoundPlayer.getInstance().stop();
     }
 
 
@@ -89,5 +92,15 @@ public class LoadDialog extends BaseDialog implements DialogInterface.OnDismissL
                 dismiss();
             }
         }, 500);
+    }
+
+    public void showWithSound() {
+        SoundPlayer.getInstance().playVoice(R.raw.loading, true);
+        super.show();
+    }
+
+    public void dismissWithSound() {
+        SoundPlayer.getInstance().stop();
+        super.dismiss();
     }
 }

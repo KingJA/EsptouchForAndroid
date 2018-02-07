@@ -2,6 +2,7 @@ package com.espressif.iot.esptouch.kingja;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -28,20 +29,26 @@ public class MainActivity extends Activity {
         tv_send_password.setOnClickListener(new OnSoundClickListener() {
             @Override
             public void onSoundClick(View view) {
-                startActivity(new Intent(MainActivity.this,EsptouchDemoActivity.class));
+                startActivity(new Intent(MainActivity.this, EsptouchDemoActivity.class));
             }
         });
         tv_tag_datas.setOnClickListener(new OnSoundClickListener() {
             @Override
             public void onSoundClick(View view) {
-                startActivity(new Intent(MainActivity.this,TagDataListActivity.class));
+                startActivity(new Intent(MainActivity.this, TagDataListActivity.class));
             }
         });
         tv_tags.setOnClickListener(new OnSoundClickListener() {
             @Override
             public void onSoundClick(View view) {
-                startActivity(new Intent(MainActivity.this,TagListActivity.class));
+                startActivity(new Intent(MainActivity.this, TagListActivity.class));
             }
         });
+    }
+
+    public void seeKingJA(View view) {
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.setData(Uri.parse("https://github.com/KingJA"));
+        startActivity(intent);
     }
 }
