@@ -148,7 +148,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
     }
 
     @Override
-    public void onEditTagStatus(int tagId, final int status, final int position) {
+    public void onEditTagStatus(String tagId, final int status, final int position) {
         loadDialog.show();
         Map<String, String> param = new HashMap<>();
         param.put("tagid", String.valueOf(tagId));
@@ -192,7 +192,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
                     public void onResponse(NoResult response) {
                         if (response.getStatus() == 0) {
                             SoundPlayer.getInstance().playVoice(R.raw.success);
-                            tagsAdapter.addTag(Integer.valueOf(tagId));
+                            tagsAdapter.addTag(tagId);
                             loadDialog.showTip("Success");
                         } else {
                             loadDialog.showTip(response.getMessage());
@@ -215,7 +215,7 @@ public class TagListActivity extends Activity implements AdapterView.OnItemClick
     }
 
     @Override
-    public void onTagDelete(int tagId, final int position) {
+    public void onTagDelete(String tagId, final int position) {
         loadDialog.show();
         Map<String, String> param = new HashMap<>();
         param.put("tagid", String.valueOf(tagId));

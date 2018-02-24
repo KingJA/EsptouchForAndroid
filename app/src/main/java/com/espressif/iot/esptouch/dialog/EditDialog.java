@@ -90,7 +90,7 @@ public class EditDialog extends BaseDialog {
     }
 
     public interface OnEditTagStatusListener {
-        void onEditTagStatus(int tagId,int status,int position);
+        void onEditTagStatus(String tagId,int status,int position);
     }
 
     public void setOnEditTagStatusListener(OnEditTagStatusListener onEditTagStatusListener) {

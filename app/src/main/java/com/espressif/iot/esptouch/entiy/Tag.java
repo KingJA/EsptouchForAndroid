@@ -51,14 +51,14 @@ public class Tag {
          * status : 1
          */
 
-        private int tagId;
+        private String tagId;
         private int status;
 
-        public int getTagId() {
+        public String getTagId() {
             return tagId;
         }
 
-        public void setTagId(int tagId) {
+        public void setTagId(String tagId) {
             this.tagId = tagId;
         }
 

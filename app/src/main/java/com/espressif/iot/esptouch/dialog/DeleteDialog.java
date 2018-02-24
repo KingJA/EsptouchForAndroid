@@ -15,12 +15,12 @@ import com.espressif.iot_esptouch_demo.R;
  */
 public class DeleteDialog extends BaseDialog {
 
-    private final int tagId;
+    private final String tagId;
     private final int position;
     private TextView tv_cancel;
     private TextView tv_delete;
 
-    public DeleteDialog(Context context, int tagId, int position) {
+    public DeleteDialog(Context context, String tagId, int position) {
         super(context);
         this.tagId = tagId;
         this.position = position;
@@ -67,7 +67,7 @@ public class DeleteDialog extends BaseDialog {
     }
 
     public interface OnTagDeleteListener {
-        void onTagDelete(int tagId, int position);
+        void onTagDelete(String tagId, int position);
     }
 
     private OnTagDeleteListener onTagDeleteListener;

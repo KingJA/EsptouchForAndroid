@@ -71,6 +71,7 @@ public class TagDataListActivity extends Activity implements Callback.OnReloadLi
                                     loadService.showSuccess();
                                 } else {
                                     loadService.showCallback(EmptyCallback.class);
+                                    SoundPlayer.getInstance().playVoice(R.raw.error01);
                                 }
                             }
                         }

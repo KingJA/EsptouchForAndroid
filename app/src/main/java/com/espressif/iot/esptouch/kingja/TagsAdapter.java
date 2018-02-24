@@ -45,7 +45,7 @@ public class TagsAdapter extends BaseLvAdapter<Tag.DataBean> {
         notifyDataSetChanged();
     }
 
-    public void addTag(int tagId) {
+    public void addTag(String tagId) {
         Tag.DataBean tag = new Tag.DataBean();
         tag.setTagId(tagId);
         list.add(0, tag);

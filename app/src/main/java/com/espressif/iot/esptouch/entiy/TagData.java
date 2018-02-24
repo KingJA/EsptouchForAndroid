@@ -52,16 +52,16 @@ public class TagData {
          * content : 3LYQO0
          */
 
-        private int tagId;
+        private String tagId;
         private String tagDate;
         private int baseStation;
         private String content;
 
-        public int getTagId() {
+        public String getTagId() {
             return tagId;
         }
 
-        public void setTagId(int tagId) {
+        public void setTagId(String tagId) {
             this.tagId = tagId;
         }
 

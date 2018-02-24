@@ -8,7 +8,8 @@ package com.espressif.iot.esptouch.kingja;
  */
 public class Constants {
     //    public static String TAG_DATAS = HOST+"http://10.1.6.107:3000/";
-    public static String HOST = "http://10.1.6.107:8001";
+//    public static String HOST = "http://10.1.6.107:8001";
+    public static String HOST = "http://122.228.188.211:8001";
     public static String TAG_DATAS = HOST + "/tag";
     public static String TAGS = HOST + "/tagFilter";
     public static String ADD_TAG = HOST + "/tagFilter/add";
